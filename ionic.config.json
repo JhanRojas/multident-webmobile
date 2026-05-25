@@ -1,0 +1,7 @@
+{
+  "name": "multident-webmobil",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
