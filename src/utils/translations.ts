@@ -9,6 +9,11 @@ export const translations = {
       'You dont have any appointments available at the moment',
     scheduleApptBtnText: 'Schedule an appointment',
     quickAccessText: 'Quick access',
+    addFamilyText: 'Add family members',
+    addCardText: 'Add credit card',
+    editAccessibilityText: 'Edit accessibility',
+    viewMyApptsText: 'View my appointments',
+    backText: 'Back',
   },
 
   es: {
@@ -20,6 +25,11 @@ export const translations = {
     apptsNotFoundText1: 'No cuentas con citas por el momento',
     scheduleApptBtnText: 'Agendar cita',
     quickAccessText: 'Accesos rápidos',
+    addFamilyText: 'Agregar familiares',
+    addCardText: 'Agregar tarjeta',
+    editAccessibilityText: 'Editar accesibilidad',
+    viewMyApptsText: 'Ver mis citas programadas',
+    backText: 'Atrás',
   },
 
   qu: {
@@ -31,5 +41,10 @@ export const translations = {
     apptsNotFoundText1: 'Kunanqa manan ima citatapas kanchu',
     scheduleApptBtnText: 'Huk cita ruway',
     quickAccessText: 'Utqaylla yaykuy',
+    addFamilyText: 'Ayllu runakunata yapay',
+    addCardText: 'Tarjeta yapay',
+    editAccessibilityText: 'Yaykuna atiyta llamkapuy',
+    viewMyApptsText: 'Citaykunata qhaway',
+    backText: 'Qipaman',
   },
 };

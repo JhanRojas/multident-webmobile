@@ -18,10 +18,13 @@ import {
   IonText,
 } from '@ionic/react';
 
+import { translations } from '../../../utils/translations';
 import { getCurrentUser, logoutUser } from '../../../services/auth.service';
 import type { User } from '../../../services/auth.service';
 
 const Profile: React.FC = () => {
+  const language = localStorage.getItem('language') || 'es';
+  const t = translations[language as keyof typeof translations];
   const history = useHistory();
   const [user, setUser] = useState<User | null>(null);
   const handleLogout = () => {
@@ -37,7 +40,7 @@ const Profile: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
-            <IonBackButton defaultHref="/dashboard/home" />
+            <IonBackButton defaultHref="/dashboard/home" text={t.backText} />
           </IonButtons>
           <IonTitle>Mi Perfil</IonTitle>
         </IonToolbar>

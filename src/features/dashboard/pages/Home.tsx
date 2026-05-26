@@ -9,7 +9,16 @@ import {
   IonGrid,
   IonRow,
   IonCol,
+  IonCardHeader,
+  IonText,
+  IonIcon,
 } from '@ionic/react';
+import {
+  personAdd,
+  cardOutline,
+  accessibility,
+  calendar,
+} from 'ionicons/icons';
 
 import { speak } from '../../../utils/speech';
 import { translations } from '../../../utils/translations';
@@ -61,6 +70,52 @@ const Home: React.FC = () => {
           </IonCardContent>
         </IonCard>
         <h4>{t.quickAccessText}</h4>
+        <IonGrid>
+          <IonRow>
+            <IonCol>
+              <IonCard button>
+                <IonCardHeader>
+                  <IonIcon icon={personAdd} size="large"></IonIcon>
+                </IonCardHeader>
+                <IonCardContent>
+                  <IonText>{t.addFamilyText}</IonText>
+                </IonCardContent>
+              </IonCard>
+            </IonCol>
+            <IonCol>
+              <IonCard button>
+                <IonCardHeader>
+                  <IonIcon icon={cardOutline} size="large"></IonIcon>
+                </IonCardHeader>
+                <IonCardContent>
+                  <IonText>{t.addCardText}</IonText>
+                </IonCardContent>
+              </IonCard>
+            </IonCol>
+          </IonRow>
+          <IonRow>
+            <IonCol>
+              <IonCard button>
+                <IonCardHeader>
+                  <IonIcon icon={accessibility} size="large"></IonIcon>
+                </IonCardHeader>
+                <IonCardContent>
+                  <IonText>{t.editAccessibilityText}</IonText>
+                </IonCardContent>
+              </IonCard>
+            </IonCol>
+            <IonCol>
+              <IonCard button>
+                <IonCardHeader>
+                  <IonIcon icon={calendar} size="large"></IonIcon>
+                </IonCardHeader>
+                <IonCardContent>
+                  <IonText>{t.viewMyApptsText}</IonText>
+                </IonCardContent>
+              </IonCard>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
       </IonContent>
     </IonPage>
   );

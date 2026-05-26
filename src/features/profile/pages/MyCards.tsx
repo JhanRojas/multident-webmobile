@@ -19,13 +19,17 @@ import {
 } from '@ionic/react';
 import { cardOutline, addOutline } from 'ionicons/icons';
 
+import { translations } from '../../../utils/translations';
+
 const MyCards: React.FC = () => {
+  const language = localStorage.getItem('language') || 'es';
+  const t = translations[language as keyof typeof translations];
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
-            <IonBackButton defaultHref="/profile" />
+            <IonBackButton defaultHref="/profile" text={t.backText} />
           </IonButtons>
           <IonTitle>Mis tarjetas</IonTitle>
         </IonToolbar>

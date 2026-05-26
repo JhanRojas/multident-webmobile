@@ -16,13 +16,17 @@ import {
   IonCol,
 } from '@ionic/react';
 
+import { translations } from '../../../utils/translations';
+
 const EditProfile: React.FC = () => {
+  const language = localStorage.getItem('language') || 'es';
+  const t = translations[language as keyof typeof translations];
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
-            <IonBackButton defaultHref="/profile" />
+            <IonBackButton defaultHref="/profile" text={t.backText} />
           </IonButtons>
           <IonTitle>Editar Perfil</IonTitle>
         </IonToolbar>

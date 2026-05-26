@@ -1,5 +1,15 @@
 :root {
   --app-font-size: 16px;
+  /* PRIMARY */
+
+  --ion-color-primary: #00aeef;
+  --ion-color-primary-rgb: 0, 174, 239;
+
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+
+  --ion-color-primary-shade: #0099d1;
+  --ion-color-primary-tint: #1ab6f;
 }
 
 html {
@@ -9,11 +19,15 @@ html {
 .high-contrast {
   --ion-background-color: #000000;
   --ion-text-color: #ffffff;
-
   --ion-color-primary: #ffff00;
   --ion-color-primary-contrast: #000000;
-
   --ion-item-background: #000000;
-
   --ion-card-background: #000000;
+}
+
+ion-button {
+  --background-hover: #0099d1;
+  --background-activated: #0088ba;
+  --background-focused: #0099d1;
+  --border-radius: 14px;
 }

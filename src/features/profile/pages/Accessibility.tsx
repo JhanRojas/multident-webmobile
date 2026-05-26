@@ -15,6 +15,7 @@ import {
   IonSelectOption,
 } from '@ionic/react';
 
+import { translations } from '../../../utils/translations';
 import { useAccessibility } from '../../../hooks/useAccessibility';
 
 const Accessibility: React.FC = () => {
@@ -33,13 +34,14 @@ const Accessibility: React.FC = () => {
     toggleReduceMotion,
     toggleVoiceReading,
   } = useAccessibility();
+  const t = translations[language as keyof typeof translations];
 
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
-            <IonBackButton defaultHref="/profile" />
+            <IonBackButton defaultHref="/profile" text={t.backText} />
           </IonButtons>
           <IonTitle>Accesibilidad</IonTitle>
         </IonToolbar>

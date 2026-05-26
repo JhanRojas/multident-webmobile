@@ -32,7 +32,7 @@ import Dashboard from './features/dashboard/pages/Dashboard';
 import Profile from './features/profile/pages/Profile';
 import EditProfile from './features/profile/pages/EditProfile';
 import MyCards from './features/profile/pages/MyCards';
-import Accessibility from './features/accessibility/pages/Accessibility';
+import Accessibility from './features/profile/pages/Accessibility';
 import NewAppointment from './features/appointments/pages/NewAppointment';
 import SelectDoctor from './features/appointments/pages/doctor-flow/SelectDoctor';
 import SelectSpeciality from './features/appointments/pages/doctor-flow/SelectSpeciality';
