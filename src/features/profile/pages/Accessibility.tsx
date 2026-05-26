@@ -46,7 +46,7 @@ const Accessibility: React.FC = () => {
           <IonTitle>Accesibilidad</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent>
+      <IonContent fullscreen>
         <IonList inset>
           <IonItem>
             <IonLabel>Modo oscuro</IonLabel>

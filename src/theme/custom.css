@@ -1,0 +1,67 @@
+ion-button {
+  --border-radius: 18px;
+  min-height: 50px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+ion-toolbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(var(--background-glass-color), 0.82) 0%,
+    rgba(var(--background-glass-color), 0.58) 28%,
+    rgba(var(--background-glass-color), 0.28) 52%,
+    rgba(var(--background-glass-color), 0.1) 78%,
+    rgba(var(--background-glass-color), 0) 100%
+  );
+}
+ion-toolbar {
+  --background: transparent;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+.header-ios ion-toolbar:last-of-type {
+  --border-width: 0 0 0;
+}
+
+ion-tab-bar {
+  --background: transparent;
+  --border: 0;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+ion-tab-bar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(var(--background-glass-color), 0.82) 0%,
+    rgba(var(--background-glass-color), 0.58) 48%,
+    rgba(var(--background-glass-color), 0.28) 72%,
+    rgba(var(--background-glass-color), 0.1) 88%,
+    rgba(var(--background-glass-color), 0) 100%
+  );
+}
+
+.quick-action-card {
+  min-height: 135px;
+}
+.quick-action-card:hover {
+  border: 1px solid var(--ion-color-primary);
+  color: var(--ion-color-primary);
+}
+.quick-action-card:active {
+  border: 1px solid var(--ion-color-primary);
+  color: var(--ion-color-primary);
+}
+.quick-action-card:focus {
+  border: 1px solid var(--ion-color-primary);
+  color: var(--ion-color-primary);
+}

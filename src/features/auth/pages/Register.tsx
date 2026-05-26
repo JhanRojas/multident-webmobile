@@ -43,7 +43,7 @@ const Register: React.FC = () => {
           <IonTitle>Crear Cuenta</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent class="ion-padding">
+      <IonContent fullscreen class="ion-padding">
         <IonText>
           <h1>Registro</h1>
         </IonText>

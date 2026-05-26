@@ -12,7 +12,7 @@ export const translations = {
     addFamilyText: 'Add family members',
     addCardText: 'Add credit card',
     editAccessibilityText: 'Edit accessibility',
-    viewMyApptsText: 'View my appointments',
+    editProfileText: 'Edit profile',
     backText: 'Back',
   },
 
@@ -28,7 +28,7 @@ export const translations = {
     addFamilyText: 'Agregar familiares',
     addCardText: 'Agregar tarjeta',
     editAccessibilityText: 'Editar accesibilidad',
-    viewMyApptsText: 'Ver mis citas programadas',
+    editProfileText: 'Editar perfil',
     backText: 'Atrás',
   },
 
@@ -44,7 +44,7 @@ export const translations = {
     addFamilyText: 'Ayllu runakunata yapay',
     addCardText: 'Tarjeta yapay',
     editAccessibilityText: 'Yaykuna atiyta llamkapuy',
-    viewMyApptsText: 'Citaykunata qhaway',
+    editProfileText: 'Perfil nisqa llamkapuy',
     backText: 'Qipaman',
   },
 };

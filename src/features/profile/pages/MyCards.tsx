@@ -34,7 +34,7 @@ const MyCards: React.FC = () => {
           <IonTitle>Mis tarjetas</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent className="ion-padding">
+      <IonContent fullscreen className="ion-padding">
         <IonCard>
           <IonCardContent>
             <IonGrid>

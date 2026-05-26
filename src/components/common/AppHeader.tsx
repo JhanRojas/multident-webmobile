@@ -17,7 +17,7 @@ const AppHeader: React.FC<Props> = ({ title }) => {
       <IonToolbar>
         <IonTitle>{title}</IonTitle>
         <IonButtons slot="end">
-          <IonButton routerLink="/profile">
+          <IonButton routerLink="/profile" color={'secondary'}>
             <IonAvatar style={{ width: '32px', height: '32px' }}>
               <img src="https://i.pravatar.cc/100" alt="Usuario" />
             </IonAvatar>

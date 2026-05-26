@@ -16,7 +16,13 @@ import {
   IonRadio,
   IonRadioGroup,
   IonAvatar,
+  IonCard,
+  IonCardHeader,
+  IonIcon,
+  IonCardContent,
+  IonText,
 } from '@ionic/react';
+import { person, library } from 'ionicons/icons';
 
 const NewAppointment: React.FC = () => {
   const modal = useRef<HTMLIonModalElement>(null);
@@ -45,11 +51,11 @@ const NewAppointment: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonList>
+        <IonList inset>
           <IonListHeader>
             <IonLabel>¿Para quién es la cita?</IonLabel>
           </IonListHeader>
-          <IonItem id="open-modal">
+          <IonItem button id="open-modal">
             <IonAvatar aria-hidden="true" slot="start">
               <img
                 alt=""
@@ -64,13 +70,22 @@ const NewAppointment: React.FC = () => {
             <IonLabel>¿Cómo deseas agendar tu cita?</IonLabel>
           </IonListHeader>
           <IonItem>
-            <IonButton
-              size="large"
-              routerLink="/appointments/doctor/select-doctor"
-            >
-              Por médico
-            </IonButton>
-            <IonButton size="large">Por especialidad</IonButton>
+            <IonCard button routerLink="/appointments/doctor/select-doctor">
+              <IonCardHeader>
+                <IonIcon icon={person} size="large"></IonIcon>
+              </IonCardHeader>
+              <IonCardContent>
+                <IonText>Médico</IonText>
+              </IonCardContent>
+            </IonCard>
+            <IonCard button>
+              <IonCardHeader>
+                <IonIcon icon={library} size="large"></IonIcon>
+              </IonCardHeader>
+              <IonCardContent>
+                <IonText>Especialidad</IonText>
+              </IonCardContent>
+            </IonCard>
           </IonItem>
         </IonList>
         <IonModal

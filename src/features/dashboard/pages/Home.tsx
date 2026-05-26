@@ -17,7 +17,7 @@ import {
   personAdd,
   cardOutline,
   accessibility,
-  calendar,
+  personCircle,
 } from 'ionicons/icons';
 
 import { speak } from '../../../utils/speech';
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
   return (
     <IonPage>
       <AppHeader title={t.home} />
-      <IonContent class="ion-padding">
+      <IonContent fullscreen class="ion-padding">
         <h1>
           {t.hello}, {userName}!
         </h1>
@@ -57,11 +57,15 @@ const Home: React.FC = () => {
           <IonCardContent>
             <IonGrid>
               <IonRow>
-                <IonCol size="12">
+                <IonCol size="12" className="ion-text-center">
                   <IonLabel>{t.apptsNotFoundText1}</IonLabel>
                 </IonCol>
                 <IonCol size="12" className="ion-margin-top">
-                  <IonButton expand="block" routerLink="/appointments/new">
+                  <IonButton
+                    expand="block"
+                    routerLink="/appointments/new"
+                    color={'primary'}
+                  >
                     {t.scheduleApptBtnText}
                   </IonButton>
                 </IonCol>
@@ -73,21 +77,29 @@ const Home: React.FC = () => {
         <IonGrid>
           <IonRow>
             <IonCol>
-              <IonCard button>
-                <IonCardHeader>
+              <IonCard
+                button
+                routerLink="/profile"
+                className="ion-no-margin quick-action-card"
+              >
+                <IonCardHeader className="ion-align-items-center">
                   <IonIcon icon={personAdd} size="large"></IonIcon>
                 </IonCardHeader>
-                <IonCardContent>
+                <IonCardContent className="ion-text-center">
                   <IonText>{t.addFamilyText}</IonText>
                 </IonCardContent>
               </IonCard>
             </IonCol>
             <IonCol>
-              <IonCard button>
-                <IonCardHeader>
+              <IonCard
+                button
+                routerLink="/my-cards"
+                className="ion-no-margin quick-action-card"
+              >
+                <IonCardHeader className="ion-align-items-center">
                   <IonIcon icon={cardOutline} size="large"></IonIcon>
                 </IonCardHeader>
-                <IonCardContent>
+                <IonCardContent className="ion-text-center">
                   <IonText>{t.addCardText}</IonText>
                 </IonCardContent>
               </IonCard>
@@ -95,22 +107,30 @@ const Home: React.FC = () => {
           </IonRow>
           <IonRow>
             <IonCol>
-              <IonCard button>
-                <IonCardHeader>
+              <IonCard
+                button
+                routerLink="/accessibility"
+                className="ion-no-margin quick-action-card"
+              >
+                <IonCardHeader className="ion-align-items-center">
                   <IonIcon icon={accessibility} size="large"></IonIcon>
                 </IonCardHeader>
-                <IonCardContent>
+                <IonCardContent className="ion-text-center">
                   <IonText>{t.editAccessibilityText}</IonText>
                 </IonCardContent>
               </IonCard>
             </IonCol>
             <IonCol>
-              <IonCard button>
-                <IonCardHeader>
-                  <IonIcon icon={calendar} size="large"></IonIcon>
+              <IonCard
+                button
+                routerLink="/profile"
+                className="ion-no-margin quick-action-card"
+              >
+                <IonCardHeader className="ion-align-items-center">
+                  <IonIcon icon={personCircle} size="large"></IonIcon>
                 </IonCardHeader>
-                <IonCardContent>
-                  <IonText>{t.viewMyApptsText}</IonText>
+                <IonCardContent className="ion-text-center">
+                  <IonText>{t.editProfileText}</IonText>
                 </IonCardContent>
               </IonCard>
             </IonCol>

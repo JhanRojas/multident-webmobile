@@ -45,7 +45,7 @@ const Profile: React.FC = () => {
           <IonTitle>Mi Perfil</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent class="ion-padding">
+      <IonContent fullscreen class="ion-padding">
         <IonGrid>
           <IonRow className="ion-justify-content-center">
             <IonCol size="12" className="ion-text-center">

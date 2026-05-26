@@ -31,7 +31,7 @@ const EditProfile: React.FC = () => {
           <IonTitle>Editar Perfil</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent className="ion-padding">
+      <IonContent fullscreen className="ion-padding">
         <IonGrid>
           <IonRow>
             <IonCol size="12" className="ion-text-center">

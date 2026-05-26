@@ -24,6 +24,7 @@ import '@ionic/react/css/palettes/dark.class.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import './theme/custom.css';
 
 import ProtectedRoute from './components/common/ProtectedRoute';
 import Login from './features/auth/pages/Login';
@@ -85,6 +86,9 @@ const App: React.FC = () => (
           path="/appointments/doctor/payment"
           component={ConfirmPayment}
         />
+        <Route exact path="/">
+          <Redirect to="/login" />
+        </Route>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
