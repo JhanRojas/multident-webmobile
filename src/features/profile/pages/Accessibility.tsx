@@ -111,11 +111,7 @@ const Accessibility: React.FC = () => {
           </IonItem>
         </IonList>
         <IonButton expand="block" className="ion-padding">
-<<<<<<< HEAD
           {t.restoreChangesText}
-=======
-          Reestablecer
->>>>>>> 0cd031f6bd4a78e15668dc7030bfda08ceaa82b8
         </IonButton>
       </IonContent>
     </IonPage>
