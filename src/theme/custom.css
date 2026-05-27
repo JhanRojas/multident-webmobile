@@ -1,21 +1,29 @@
+html {
+  font-size: var(--app-font-size);
+}
+
 ion-button {
   --border-radius: 18px;
   min-height: 50px;
-  font-size: 17px;
   font-weight: 600;
   letter-spacing: -0.2px;
 }
+ion-button.button-small {
+  min-height: 2.1em;
+  font-weight: normal;
+}
+
 ion-toolbar::before {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(var(--background-glass-color), 0.82) 0%,
-    rgba(var(--background-glass-color), 0.58) 28%,
-    rgba(var(--background-glass-color), 0.28) 52%,
-    rgba(var(--background-glass-color), 0.1) 78%,
-    rgba(var(--background-glass-color), 0) 100%
+    rgba(var(--toolbar-background-color-rgb), 0.82) 0%,
+    rgba(var(--toolbar-background-color-rgb), 0.58) 28%,
+    rgba(var(--toolbar-background-color-rgb), 0.28) 52%,
+    rgba(var(--toolbar-background-color-rgb), 0.1) 78%,
+    rgba(var(--toolbar-background-color-rgb), 0) 100%
   );
 }
 ion-toolbar {
@@ -35,6 +43,7 @@ ion-tab-bar {
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
 }
+
 ion-tab-bar::before {
   content: '';
   position: absolute;
@@ -42,12 +51,26 @@ ion-tab-bar::before {
   pointer-events: none;
   background: linear-gradient(
     to top,
-    rgba(var(--background-glass-color), 0.82) 0%,
-    rgba(var(--background-glass-color), 0.58) 48%,
-    rgba(var(--background-glass-color), 0.28) 72%,
-    rgba(var(--background-glass-color), 0.1) 88%,
-    rgba(var(--background-glass-color), 0) 100%
+    rgba(var(--toolbar-background-color-rgb), 0.82) 0%,
+    rgba(var(--toolbar-background-color-rgb), 0.58) 48%,
+    rgba(var(--toolbar-background-color-rgb), 0.28) 72%,
+    rgba(var(--toolbar-background-color-rgb), 0.1) 88%,
+    rgba(var(--toolbar-background-color-rgb), 0) 100%
   );
+}
+
+ion-list {
+  border-radius: 18px !important;
+}
+ion-item {
+  --background: var(--item-background-color);
+  --padding-start: 20px;
+  --border-color: rgba(60, 60, 67, 0.12);
+  --min-height: 56px;
+}
+
+ion-toggle {
+  --track-background: var(--ion-background-color);
 }
 
 .quick-action-card {

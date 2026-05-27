@@ -28,37 +28,56 @@ const EditProfile: React.FC = () => {
           <IonButtons slot="start">
             <IonBackButton defaultHref="/profile" text={t.backText} />
           </IonButtons>
-          <IonTitle>Editar Perfil</IonTitle>
+          <IonTitle>{t.editProfileTitle}</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen className="ion-padding">
+      <IonContent fullscreen>
         <IonGrid>
           <IonRow>
             <IonCol size="12" className="ion-text-center">
               <IonAvatar
                 style={{ width: '100px', height: '100px', margin: '0 auto' }}
               >
-                <img src="https://i.pravatar.cc/200" alt="Usuario" />
+                <img
+                  src="https://ionicframework.com/docs/img/demos/avatar.svg"
+                  alt="Usuario"
+                />
               </IonAvatar>
             </IonCol>
             <IonCol size="12" className="ion-text-center ion-margin-top">
-              <IonButton fill="outline">Cambiar foto</IonButton>
+              <IonButton fill="outline" size="small">
+                {t.changeText}
+              </IonButton>
             </IonCol>
           </IonRow>
         </IonGrid>
-        <IonList>
+        <IonList inset>
           <IonItem>
-            <IonInput value="Katherine Torres" />
+            <IonInput placeholder={t.firstNameText} value="Katherine" />
           </IonItem>
           <IonItem>
-            <IonInput type="email" value="ktorres@email.com" />
+            <IonInput placeholder={t.lastNameText} value="Torres" />
           </IonItem>
           <IonItem>
-            <IonInput type="tel" value="+51 999 999 999" />
+            <IonInput placeholder={t.birthDateText} value="10/02/1992" />
+          </IonItem>
+          <IonItem>
+            <IonInput
+              placeholder={t.mailText}
+              type="email"
+              value="ktorres@email.com"
+            />
+          </IonItem>
+          <IonItem>
+            <IonInput
+              placeholder={t.phoneNumberText}
+              type="tel"
+              value="+51 999 999 999"
+            />
           </IonItem>
         </IonList>
-        <IonButton expand="block" className="ion-margin-top">
-          Guardar cambios
+        <IonButton expand="block" className="ion-padding ion-text-center">
+          {t.saveChangesText}
         </IonButton>
       </IonContent>
     </IonPage>

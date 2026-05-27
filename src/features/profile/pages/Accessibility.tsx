@@ -13,6 +13,7 @@ import {
   IonRange,
   IonSelect,
   IonSelectOption,
+  IonButton,
 } from '@ionic/react';
 
 import { translations } from '../../../utils/translations';
@@ -34,7 +35,9 @@ const Accessibility: React.FC = () => {
     toggleReduceMotion,
     toggleVoiceReading,
   } = useAccessibility();
-  const t = translations[language as keyof typeof translations];
+
+  const languageSaved = localStorage.getItem('language') || 'es';
+  const t = translations[languageSaved as keyof typeof translations];
 
   return (
     <IonPage>
@@ -43,13 +46,13 @@ const Accessibility: React.FC = () => {
           <IonButtons slot="start">
             <IonBackButton defaultHref="/profile" text={t.backText} />
           </IonButtons>
-          <IonTitle>Accesibilidad</IonTitle>
+          <IonTitle>{t.accessibilityTitle}</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonList inset>
           <IonItem>
-            <IonLabel>Modo oscuro</IonLabel>
+            <IonLabel>{t.darkModeText}</IonLabel>
             <IonToggle
               slot="end"
               checked={darkMode}
@@ -57,7 +60,7 @@ const Accessibility: React.FC = () => {
             />
           </IonItem>
           <IonItem>
-            <IonLabel>Tamaño de texto</IonLabel>
+            <IonLabel>{t.textSizeText}</IonLabel>
           </IonItem>
           <IonItem>
             <IonRange
@@ -71,7 +74,7 @@ const Accessibility: React.FC = () => {
             />
           </IonItem>
           <IonItem>
-            <IonLabel>Alto contraste</IonLabel>
+            <IonLabel>{t.highContrastText}</IonLabel>
             <IonToggle
               slot="end"
               checked={highContrast}
@@ -79,7 +82,7 @@ const Accessibility: React.FC = () => {
             />
           </IonItem>
           <IonItem>
-            <IonLabel>Lectura por voz</IonLabel>
+            <IonLabel>{t.voiceReadingText}</IonLabel>
             <IonToggle
               slot="end"
               checked={voiceReading}
@@ -87,7 +90,7 @@ const Accessibility: React.FC = () => {
             />
           </IonItem>
           <IonItem>
-            <IonLabel>Idioma</IonLabel>
+            <IonLabel>{t.languageText}</IonLabel>
             <IonSelect
               value={language}
               placeholder="Seleccionar"
@@ -99,7 +102,7 @@ const Accessibility: React.FC = () => {
             </IonSelect>
           </IonItem>
           <IonItem>
-            <IonLabel>Reducir animaciones</IonLabel>
+            <IonLabel>{t.reduceAnimationText}</IonLabel>
             <IonToggle
               slot="end"
               checked={reduceMotion}
@@ -107,6 +110,9 @@ const Accessibility: React.FC = () => {
             />
           </IonItem>
         </IonList>
+        <IonButton expand="block" className="ion-padding">
+          {t.restoreChangesText}
+        </IonButton>
       </IonContent>
     </IonPage>
   );

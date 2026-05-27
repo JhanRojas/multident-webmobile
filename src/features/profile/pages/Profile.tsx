@@ -16,6 +16,7 @@ import {
   IonRow,
   IonCol,
   IonText,
+  IonButton,
 } from '@ionic/react';
 
 import { translations } from '../../../utils/translations';
@@ -42,17 +43,20 @@ const Profile: React.FC = () => {
           <IonButtons slot="start">
             <IonBackButton defaultHref="/dashboard/home" text={t.backText} />
           </IonButtons>
-          <IonTitle>Mi Perfil</IonTitle>
+          <IonTitle>{t.profileTitle}</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen class="ion-padding">
+      <IonContent fullscreen>
         <IonGrid>
           <IonRow className="ion-justify-content-center">
             <IonCol size="12" className="ion-text-center">
               <IonAvatar
                 style={{ width: '100px', height: '100px', margin: '0 auto' }}
               >
-                <img src="https://i.pravatar.cc/200" alt="Usuario" />
+                <img
+                  src="https://ionicframework.com/docs/img/demos/avatar.svg"
+                  alt="Usuario"
+                />
               </IonAvatar>
             </IonCol>
             <IonCol size="12" className="ion-text-center ion-margin-top">
@@ -63,23 +67,28 @@ const Profile: React.FC = () => {
             </IonCol>
           </IonRow>
         </IonGrid>
-        <IonList>
+        <IonList inset>
           <IonItem button routerLink="/edit-profile">
-            <IonLabel>Editar perfil</IonLabel>
+            <IonLabel>{t.editProfileText}</IonLabel>
           </IonItem>
           <IonItem button routerLink="/my-cards">
-            <IonLabel>Mis tajertas</IonLabel>
+            <IonLabel>{t.myCardsText}</IonLabel>
           </IonItem>
           <IonItem button routerLink="/accessibility">
-            <IonLabel>Accesibilidad</IonLabel>
+            <IonLabel>{t.accessibilityText}</IonLabel>
           </IonItem>
           <IonItem button>
-            <IonLabel>Ayuda</IonLabel>
-          </IonItem>
-          <IonItem button color="danger" onClick={handleLogout}>
-            <IonLabel>Cerrar sesión</IonLabel>
+            <IonLabel>{t.helpText}</IonLabel>
           </IonItem>
         </IonList>
+        <IonButton
+          onClick={handleLogout}
+          expand="block"
+          color={'danger'}
+          className="ion-padding ion-text-center"
+        >
+          {t.logOutText}
+        </IonButton>
       </IonContent>
     </IonPage>
   );

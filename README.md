@@ -2,8 +2,6 @@
 
 Aplicación móvil híbrida desarrollada con Ionic React para la gestión de citas médicas y funcionalidades de accesibilidad.
 
----
-
 # Tecnologías utilizadas
 
 - Ionic Framework
@@ -13,8 +11,6 @@ Aplicación móvil híbrida desarrollada con Ionic React para la gestión de cit
 - Capacitor
 - Node.js
 - npm
-
----
 
 # Requisitos previos
 
@@ -32,8 +28,6 @@ Versión utilizada en el proyecto:
 v22.22.3
 ```
 
----
-
 ## npm
 
 Verificar versión instalada:
@@ -47,8 +41,6 @@ Versión utilizada en el proyecto:
 ```bash
 10.9.8
 ```
-
----
 
 # Instalación de Ionic CLI
 
@@ -70,8 +62,6 @@ Versión utilizada:
 7.2.1
 ```
 
----
-
 # Creación del proyecto
 
 Crear proyecto Ionic React utilizando plantilla Tabs:
@@ -79,8 +69,6 @@ Crear proyecto Ionic React utilizando plantilla Tabs:
 ```bash
 ionic start multident-webmobile tabs --type=react
 ```
-
----
 
 # Instalación de dependencias
 
@@ -96,8 +84,6 @@ Instalar dependencias:
 npm install
 ```
 
----
-
 # Ejecución del proyecto
 
 Levantar aplicación localmente:
@@ -112,8 +98,6 @@ La aplicación estará disponible normalmente en:
 http://localhost:8100
 ```
 
----
-
 # Exposición HTTPS para dispositivos móviles
 
 Para acceder desde dispositivos móviles mediante HTTPS se utilizó ngrok.
@@ -121,10 +105,7 @@ Para acceder desde dispositivos móviles mediante HTTPS se utilizó ngrok.
 ## Instalar ngrok
 
 Descargar desde:
-
 https://ngrok.com/download
-
----
 
 ## Iniciar túnel HTTPS
 
@@ -142,8 +123,6 @@ https://xxxxxxxx.ngrok-free.app
 
 La URL puede abrirse directamente desde un iPhone o dispositivo Android.
 
----
-
 # Estructura del proyecto
 
 ```text
@@ -155,8 +134,6 @@ src/
 ├── theme/
 └── App.tsx
 ```
-
----
 
 # Funcionalidades implementadas
 
@@ -173,8 +150,6 @@ src/
   - Cambio de idioma
   - Ajuste de tamaño de fuente
 
----
-
 # Scripts útiles
 
 ## Ejecutar aplicación
@@ -183,23 +158,17 @@ src/
 ionic serve
 ```
 
----
-
 ## Ejecutar pruebas
 
 ```bash
 npm test
 ```
 
----
-
 ## Formatear código
 
 ```bash
 npx prettier --write .
 ```
-
----
 
 # Configuración recomendada VS Code
 
@@ -209,8 +178,6 @@ npx prettier --write .
 - ESLint
 - Prettier
 - TypeScript Importer
-
----
 
 # Autor
 
