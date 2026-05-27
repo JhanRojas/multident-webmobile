@@ -19,7 +19,10 @@ const AppHeader: React.FC<Props> = ({ title }) => {
         <IonButtons slot="end">
           <IonButton routerLink="/profile" color={'secondary'}>
             <IonAvatar style={{ width: '32px', height: '32px' }}>
-              <img src="https://i.pravatar.cc/100" alt="Usuario" />
+              <img
+                src="https://ionicframework.com/docs/img/demos/avatar.svg"
+                alt="Usuario"
+              />
             </IonAvatar>
           </IonButton>
         </IonButtons>

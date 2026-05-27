@@ -7,7 +7,8 @@
   --ion-font-family:
     -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue',
     sans-serif;
-  --background-glass-color: 255, 255, 255;
+  --toolbar-background-color-rgb: 255, 255, 255;
+  --item-background-color: #ffffff;
 }
 
 .high-contrast {
@@ -19,5 +20,6 @@
   --ion-card-background: #000000;
 }
 .ion-palette-dark {
-  --background-glass-color: 0, 0, 0;
+  --toolbar-background-color-rgb: 0, 0, 0;
+  --item-background-color: #1c1c1d;
 }

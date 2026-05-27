@@ -13,6 +13,7 @@ import {
   IonRange,
   IonSelect,
   IonSelectOption,
+  IonButton,
 } from '@ionic/react';
 
 import { translations } from '../../../utils/translations';
@@ -107,6 +108,9 @@ const Accessibility: React.FC = () => {
             />
           </IonItem>
         </IonList>
+        <IonButton expand="block" className="ion-padding">
+          Reestablecer
+        </IonButton>
       </IonContent>
     </IonPage>
   );

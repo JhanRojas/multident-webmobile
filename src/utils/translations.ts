@@ -13,6 +13,10 @@ export const translations = {
     addCardText: 'Add credit card',
     editAccessibilityText: 'Edit accessibility',
     editProfileText: 'Edit profile',
+    accessibilityText: 'Accessibility',
+    myCardsText: 'My cards',
+    helpText: 'Help',
+    myProfileText: 'My profile',
     backText: 'Back',
   },
 
@@ -29,6 +33,10 @@ export const translations = {
     addCardText: 'Agregar tarjeta',
     editAccessibilityText: 'Editar accesibilidad',
     editProfileText: 'Editar perfil',
+    accessibilityText: 'Accesibilidad',
+    myCardsText: 'Mis tarjetas',
+    helpText: 'Ayuda',
+    myProfileText: 'Mi perfil',
     backText: 'Atrás',
   },
 
@@ -45,6 +53,10 @@ export const translations = {
     addCardText: 'Tarjeta yapay',
     editAccessibilityText: 'Yaykuna atiyta llamkapuy',
     editProfileText: 'Perfil nisqa llamkapuy',
+    accessibilityText: 'Accesibilidad nisqa',
+    myCardsText: 'Tarjetaykuna',
+    helpText: 'Yanapay',
+    myProfileText: 'Perfilniy',
     backText: 'Qipaman',
   },
 };
