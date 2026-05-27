@@ -10,6 +10,10 @@ ion-button {
 }
 ion-button.button-small {
   min-height: 2.1em;
+<<<<<<< HEAD
+=======
+  font-size: min(0.8125rem, 39px);
+>>>>>>> 0cd031f6bd4a78e15668dc7030bfda08ceaa82b8
   font-weight: normal;
 }
 
@@ -69,10 +73,13 @@ ion-item {
   --min-height: 56px;
 }
 
+<<<<<<< HEAD
 ion-toggle {
   --track-background: var(--ion-background-color);
 }
 
+=======
+>>>>>>> 0cd031f6bd4a78e15668dc7030bfda08ceaa82b8
 .quick-action-card {
   min-height: 135px;
 }

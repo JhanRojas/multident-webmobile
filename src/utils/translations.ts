@@ -21,6 +21,7 @@ export const translations = {
     myCardsText: 'My cards',
     helpText: 'Help',
     myProfileText: 'My profile',
+<<<<<<< HEAD
     firstNameText: 'First name',
     lastNameText: 'Last name',
     birthDateText: 'Birth date',
@@ -32,6 +33,8 @@ export const translations = {
     voiceReadingText: 'Voice reading',
     languageText: 'Language',
     reduceAnimationText: 'Reduce animations',
+=======
+>>>>>>> 0cd031f6bd4a78e15668dc7030bfda08ceaa82b8
     backText: 'Back',
     changeText: 'Change',
     logOutText: 'Log out',
@@ -60,6 +63,7 @@ export const translations = {
     myCardsText: 'Mis tarjetas',
     helpText: 'Ayuda',
     myProfileText: 'Mi perfil',
+<<<<<<< HEAD
     firstNameText: 'Nombre',
     lastNameText: 'Apellidos',
     birthDateText: 'Fecha de nacimiento',
@@ -71,6 +75,8 @@ export const translations = {
     voiceReadingText: 'Lectura por voz',
     languageText: 'Idioma',
     reduceAnimationText: 'Reducir animaciones',
+=======
+>>>>>>> 0cd031f6bd4a78e15668dc7030bfda08ceaa82b8
     backText: 'Atrás',
     changeText: 'Cambiar',
     logOutText: 'Cerrar sesión',
@@ -99,6 +105,7 @@ export const translations = {
     myCardsText: 'Tarjetaykuna',
     helpText: 'Yanapay',
     myProfileText: 'Perfilniy',
+<<<<<<< HEAD
     firstNameText: 'Suti',
     lastNameText: 'Apellidos',
     birthDateText: 'Paqarisqa punchaw',
@@ -110,6 +117,8 @@ export const translations = {
     voiceReadingText: 'Rimay-rimay',
     languageText: 'Simi',
     reduceAnimationText: 'Animacionta pisiyachiy',
+=======
+>>>>>>> 0cd031f6bd4a78e15668dc7030bfda08ceaa82b8
     backText: 'Qipaman',
     changeText: 'Tikray',
     logOutText: 'Lloqsiy',

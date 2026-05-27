@@ -46,13 +46,18 @@ const EditProfile: React.FC = () => {
             </IonCol>
             <IonCol size="12" className="ion-text-center ion-margin-top">
               <IonButton fill="outline" size="small">
+<<<<<<< HEAD
                 {t.changeText}
+=======
+                Cambiar
+>>>>>>> 0cd031f6bd4a78e15668dc7030bfda08ceaa82b8
               </IonButton>
             </IonCol>
           </IonRow>
         </IonGrid>
         <IonList inset>
           <IonItem>
+<<<<<<< HEAD
             <IonInput placeholder={t.firstNameText} value="Katherine" />
           </IonItem>
           <IonItem>
@@ -64,11 +69,25 @@ const EditProfile: React.FC = () => {
           <IonItem>
             <IonInput
               placeholder={t.mailText}
+=======
+            <IonInput placeholder="Name" value="Katherine" />
+          </IonItem>
+          <IonItem>
+            <IonInput placeholder="Lastname" value="Torres" />
+          </IonItem>
+          <IonItem>
+            <IonInput placeholder="BirthDate" value="10/02/1992" />
+          </IonItem>
+          <IonItem>
+            <IonInput
+              placeholder="Mail"
+>>>>>>> 0cd031f6bd4a78e15668dc7030bfda08ceaa82b8
               type="email"
               value="ktorres@email.com"
             />
           </IonItem>
           <IonItem>
+<<<<<<< HEAD
             <IonInput
               placeholder={t.phoneNumberText}
               type="tel"
@@ -78,6 +97,13 @@ const EditProfile: React.FC = () => {
         </IonList>
         <IonButton expand="block" className="ion-padding ion-text-center">
           {t.saveChangesText}
+=======
+            <IonInput placeholder="Phone" type="tel" value="+51 999 999 999" />
+          </IonItem>
+        </IonList>
+        <IonButton expand="block" className="ion-padding ion-text-center">
+          Guardar cambios
+>>>>>>> 0cd031f6bd4a78e15668dc7030bfda08ceaa82b8
         </IonButton>
       </IonContent>
     </IonPage>
