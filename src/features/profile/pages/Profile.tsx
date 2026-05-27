@@ -43,11 +43,7 @@ const Profile: React.FC = () => {
           <IonButtons slot="start">
             <IonBackButton defaultHref="/dashboard/home" text={t.backText} />
           </IonButtons>
-<<<<<<< HEAD
           <IonTitle>{t.profileTitle}</IonTitle>
-=======
-          <IonTitle>{t.myProfileText}</IonTitle>
->>>>>>> 0cd031f6bd4a78e15668dc7030bfda08ceaa82b8
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -91,11 +87,7 @@ const Profile: React.FC = () => {
           color={'danger'}
           className="ion-padding ion-text-center"
         >
-<<<<<<< HEAD
           {t.logOutText}
-=======
-          Cerrar sesión
->>>>>>> 0cd031f6bd4a78e15668dc7030bfda08ceaa82b8
         </IonButton>
       </IonContent>
     </IonPage>
