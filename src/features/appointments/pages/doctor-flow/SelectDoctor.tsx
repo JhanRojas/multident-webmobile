@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import {
   IonPage,
   IonContent,
@@ -6,17 +7,29 @@ import {
   IonButtons,
   IonBackButton,
   IonTitle,
+  IonSearchbar,
   IonList,
-  IonListHeader,
+  IonItem,
   IonLabel,
   IonAvatar,
-  IonItem,
 } from '@ionic/react';
 
+import { Doctor } from '../../../../models/doctor.model';
+import { doctorsMock } from '../../../../mocks/doctors.mock';
+
 const SelectDoctor: React.FC = () => {
+  const [searchText, setSearchText] = useState('');
+  const [filteredDoctors, setFilteredDoctors] = useState<Doctor[]>(doctorsMock);
+  useEffect(() => {
+    const filtered = doctorsMock.filter((doctor) => {
+      const fullName = `${doctor.firstname} ${doctor.lastname}`;
+      return fullName.toLowerCase().includes(searchText.toLowerCase());
+    });
+    setFilteredDoctors(filtered);
+  }, [searchText]);
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader translucent>
         <IonToolbar>
           <IonButtons slot="start">
             <IonBackButton defaultHref="/appointments/new" />
@@ -25,46 +38,32 @@ const SelectDoctor: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonList>
-          <IonListHeader>
-            <IonLabel>Selecciona el Médico</IonLabel>
-          </IonListHeader>
-          <IonItem routerLink="/appointments/doctor/select-specialty">
-            <IonAvatar aria-hidden="true" slot="start">
-              <img
-                alt=""
-                src="https://ionicframework.com/docs/img/demos/avatar.svg"
-              />
-            </IonAvatar>
-            <IonLabel>Abelardo Francisco Maita Beltran</IonLabel>
-          </IonItem>
-          <IonItem routerLink="/appointments/doctor/select-specialty">
-            <IonAvatar aria-hidden="true" slot="start">
-              <img
-                alt=""
-                src="https://ionicframework.com/docs/img/demos/avatar.svg"
-              />
-            </IonAvatar>
-            <IonLabel>Adolfo Felipe Chumbiauca Donayre</IonLabel>
-          </IonItem>
-          <IonItem routerLink="/appointments/doctor/select-specialty">
-            <IonAvatar aria-hidden="true" slot="start">
-              <img
-                alt=""
-                src="https://ionicframework.com/docs/img/demos/avatar.svg"
-              />
-            </IonAvatar>
-            <IonLabel>Adriana Irma Rengifo Carpio</IonLabel>
-          </IonItem>
-          <IonItem routerLink="/appointments/doctor/select-specialty">
-            <IonAvatar aria-hidden="true" slot="start">
-              <img
-                alt=""
-                src="https://ionicframework.com/docs/img/demos/avatar.svg"
-              />
-            </IonAvatar>
-            <IonLabel>Aguilar Cano David</IonLabel>
-          </IonItem>
+        <IonSearchbar
+          placeholder="Ingresa el nombre o apellido del médico"
+          animated
+          value={searchText}
+          onIonInput={(e) => setSearchText(e.detail.value!)}
+        />
+        <IonList inset>
+          {filteredDoctors.map((doctor) => (
+            <IonItem
+              key={doctor.id}
+              button
+              routerLink="/appointments/doctor/select-specialty"
+            >
+              <IonAvatar slot="start" style={{ width: '50px', height: '50px' }}>
+                <img src={doctor.photo} alt={doctor.firstname} />
+              </IonAvatar>
+              <IonLabel>
+                <h2>
+                  {doctor.firstname}
+                  <br />
+                  {doctor.lastname}
+                </h2>
+                <p>{doctor.specialty}</p>
+              </IonLabel>
+            </IonItem>
+          ))}
         </IonList>
       </IonContent>
     </IonPage>
