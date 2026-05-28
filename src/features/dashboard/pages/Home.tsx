@@ -77,11 +77,7 @@ const Home: React.FC = () => {
         <IonGrid>
           <IonRow>
             <IonCol>
-              <IonCard
-                button
-                routerLink="/profile"
-                className="ion-no-margin quick-action-card"
-              >
+              <IonCard button routerLink="/profile" className="ion-no-margin">
                 <IonCardHeader className="ion-align-items-center">
                   <IonIcon icon={personAdd} size="large"></IonIcon>
                 </IonCardHeader>
@@ -91,11 +87,7 @@ const Home: React.FC = () => {
               </IonCard>
             </IonCol>
             <IonCol>
-              <IonCard
-                button
-                routerLink="/my-cards"
-                className="ion-no-margin quick-action-card"
-              >
+              <IonCard button routerLink="/my-cards" className="ion-no-margin">
                 <IonCardHeader className="ion-align-items-center">
                   <IonIcon icon={cardOutline} size="large"></IonIcon>
                 </IonCardHeader>
@@ -110,7 +102,7 @@ const Home: React.FC = () => {
               <IonCard
                 button
                 routerLink="/accessibility"
-                className="ion-no-margin quick-action-card"
+                className="ion-no-margin"
               >
                 <IonCardHeader className="ion-align-items-center">
                   <IonIcon icon={accessibility} size="large"></IonIcon>
@@ -121,11 +113,7 @@ const Home: React.FC = () => {
               </IonCard>
             </IonCol>
             <IonCol>
-              <IonCard
-                button
-                routerLink="/profile"
-                className="ion-no-margin quick-action-card"
-              >
+              <IonCard button routerLink="/profile" className="ion-no-margin">
                 <IonCardHeader className="ion-align-items-center">
                   <IonIcon icon={personCircle} size="large"></IonIcon>
                 </IonCardHeader>

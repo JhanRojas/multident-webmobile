@@ -7,6 +7,7 @@
   --ion-font-family:
     -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue',
     sans-serif;
+  --ios-glass-border-radius: 18px;
   --toolbar-background-color-rgb: 255, 255, 255;
   --item-background-color: #ffffff;
 }

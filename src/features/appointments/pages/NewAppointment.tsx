@@ -21,6 +21,9 @@ import {
   IonIcon,
   IonCardContent,
   IonText,
+  IonGrid,
+  IonRow,
+  IonCol,
 } from '@ionic/react';
 import { person, library } from 'ionicons/icons';
 
@@ -50,11 +53,11 @@ const NewAppointment: React.FC = () => {
           <IonTitle>Agendar cita</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <IonList inset>
-          <IonListHeader>
-            <IonLabel>¿Para quién es la cita?</IonLabel>
-          </IonListHeader>
+      <IonContent fullscreen class="ion-padding">
+        <IonText>
+          <h4 className="ion-padding-start">Paciente</h4>
+        </IonText>
+        <IonList className="ion-margin-bottom">
           <IonItem button id="open-modal">
             <IonAvatar aria-hidden="true" slot="start">
               <img
@@ -65,29 +68,39 @@ const NewAppointment: React.FC = () => {
             <IonLabel>Katherine Torres</IonLabel>
           </IonItem>
         </IonList>
-        <IonList>
-          <IonListHeader>
-            <IonLabel>¿Cómo deseas agendar tu cita?</IonLabel>
-          </IonListHeader>
-          <IonItem>
-            <IonCard button routerLink="/appointments/doctor/select-doctor">
-              <IonCardHeader>
-                <IonIcon icon={person} size="large"></IonIcon>
-              </IonCardHeader>
-              <IonCardContent>
-                <IonText>Médico</IonText>
-              </IonCardContent>
-            </IonCard>
-            <IonCard button>
-              <IonCardHeader>
-                <IonIcon icon={library} size="large"></IonIcon>
-              </IonCardHeader>
-              <IonCardContent>
-                <IonText>Especialidad</IonText>
-              </IonCardContent>
-            </IonCard>
-          </IonItem>
-        </IonList>
+        <IonText>
+          <h4 className="ion-padding-start ion-padding-top">
+            ¿Cómo deseas agendar tu cita?
+          </h4>
+        </IonText>
+        <IonGrid>
+          <IonRow>
+            <IonCol>
+              <IonCard
+                button
+                routerLink="/appointments/doctor/select-doctor"
+                className="ion-no-margin"
+              >
+                <IonCardHeader className="ion-align-items-center">
+                  <IonIcon icon={person} size="large"></IonIcon>
+                </IonCardHeader>
+                <IonCardContent className="ion-text-center">
+                  <IonText>Médico</IonText>
+                </IonCardContent>
+              </IonCard>
+            </IonCol>
+            <IonCol>
+              <IonCard button className="ion-no-margin">
+                <IonCardHeader className="ion-align-items-center">
+                  <IonIcon icon={library} size="large"></IonIcon>
+                </IonCardHeader>
+                <IonCardContent className="ion-text-center">
+                  <IonText>Especialidad</IonText>
+                </IonCardContent>
+              </IonCard>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
         <IonModal
           ref={modal}
           trigger="open-modal"
